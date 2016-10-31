@@ -14,10 +14,10 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (player1.transform.position.z > this.transform.position.z + 6 || player2.transform.position.z > this.transform.position.z + 6) {
+		if (player1.transform.position.z > this.transform.position.z + 1 || player2.transform.position.z > this.transform.position.z + 1) {
 			//transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 10);
 
-			transform.position = new Vector3 (transform.position.x, transform.position.y, ((player1.transform.position.z + player2.transform.position.z) / 2));
+			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 0.1f);
 		}
 	}
 }
